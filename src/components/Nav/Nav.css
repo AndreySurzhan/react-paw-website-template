@@ -1,0 +1,7 @@
+nav {
+    height: 10vh;
+    background-color: cadetblue;  
+    position: fixed;
+    top: 0;
+    width: 100%
+}
