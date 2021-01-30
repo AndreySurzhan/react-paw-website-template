@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class AboutUsPage extends React.Component {
+export default class AboutPage extends React.Component {
     constructor(props, context) {
         super(props);
 
@@ -10,7 +10,7 @@ export default class AboutUsPage extends React.Component {
         // eslint-disable-next-line no-unused-expressions
         return (
             <div>
-                AboutUsPage
+                AboutPage
             </div>
         )
     }

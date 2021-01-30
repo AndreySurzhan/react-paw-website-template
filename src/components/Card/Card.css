@@ -1,0 +1,17 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    background-color:azure;
+}
+
+.card > img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card > p {
+    margin: 1rem;
+}

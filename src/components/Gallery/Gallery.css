@@ -1,0 +1,9 @@
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gallery > * {
+    flex-grow: 1;
+}

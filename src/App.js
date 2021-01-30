@@ -2,7 +2,7 @@ import React from 'react';
 import Shell from './components/Shell/Shell';
 
 import HomePage from './pages/Home/HomePage';
-import AboutUsPage from './pages/AboutUs/AboutUsPage';
+import AboutPage from './pages/About/AboutPage';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ function App() {
         <Shell>
           <Switch>
             <Route path='/home' component={HomePage} />
-            <Route path='/about-us' component={AboutUsPage} />
+            <Route path='/about' component={AboutPage} />
             <Route exact path='/' component={HomePage} />
           </Switch>
         </Shell>
