@@ -38,17 +38,15 @@ export default class HomePage extends React.Component {
         // eslint-disable-next-line no-unused-expressions
         return (
             <div>
-
                 <Section title="Carousel">
                     <MyCarousel>
                         {Array.from(Array(4).keys()).map((x, i) => (<img key={i} src={require('../../assets/images/1.jpg')}></img>))}
                     </MyCarousel>
                 </Section>
-                HomePage
                 <Section
                     style={{ backgroundColor: "#3c4858" }}
                     title="Cards List">
-                    {Array.from(Array(10).keys()).map(x => cards).map((card, key) => (
+                    {Array.from(Array(5).keys()).map(x => cards).map((card, key) => (
                         <Card
                             key={key}
                             title={card.title}
@@ -70,8 +68,6 @@ export default class HomePage extends React.Component {
                             </Card>))}
                     </Gallery>
                 </Section>
-
-                <p> TESTADAS DASDAS ASD SAD</p>
             </div>
         )
     }
