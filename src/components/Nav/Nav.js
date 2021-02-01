@@ -3,31 +3,49 @@ import { NavLink } from "react-router-dom";
 import './Nav.css';
 import '../../shared/styles/elevation.css';
 import Backdrop from '../Backdrop/Backdrop';
-import NavMenue from '../NavMenue/NavMenue';
+import NavMenue from '../NavMenu/NavMenu';
 import Burger from '../Burger/Burger';
+import { useMediaQuery } from 'react-responsive'
 
 
 export default function Nav(props) {
   // eslint-disable-next-line no-unused-vars
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isNavMenueOpened, setIsNavMenueOpened] = useState(false);
-  const listenScrollEvent = () => window.scrollY > 10
-    ? setIsScrolled(true)
-    : setIsScrolled(false);
+  const [isNavMenuOpened, setIsNavMenuOpened] = useState(false);
+  const [isBurgerClicked, setIsBurgerClicked] = useState(false);
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 769px)' })
+
+  function listenScrollEvent() {
+    return window.scrollY > 10
+      ? setIsScrolled(true)
+      : setIsScrolled(false);
+  }
+
+  function handleBackdropClick() {
+    setIsNavMenuOpened(!isNavMenuOpened);
+    setIsBurgerClicked(!isBurgerClicked);
+    console.log('ON DROP', isBurgerClicked)
+  }
+
+  function handleBurgerClick() {
+    setIsNavMenuOpened(!isNavMenuOpened);
+    setIsBurgerClicked(!isBurgerClicked);
+  }
+
   const stylesOnScroll = isScrolled ? 'full-opacity elevation-8' : '';
 
   useEffect(() => window.addEventListener("scroll", listenScrollEvent));
 
   return (
     <div>
-      <nav className={`nav ${stylesOnScroll}`}>
-        <h1 className="logo">
-          <NavLink className="link" to="/home">Logo</NavLink>
+      <nav className={`${stylesOnScroll}`}>
+        <h1 id="logo">
+          <NavLink to="/home">Logo</NavLink>
         </h1>
-        <Burger onClick={() => setIsNavMenueOpened(!isNavMenueOpened)}></Burger>
-        <NavMenue isOpened={isNavMenueOpened}></NavMenue>
+        <Burger onClick={handleBurgerClick} isClicked={isBurgerClicked}></Burger>
+        <NavMenue isShown={!isTabletOrMobile || isNavMenuOpened} isVertical={isTabletOrMobile}></NavMenue>
       </nav>
-      <Backdrop></Backdrop>
+      { isTabletOrMobile && isNavMenuOpened ? <Backdrop zIndex={2} onClick={handleBackdropClick}></Backdrop> : null } 
     </div>
   );
 }

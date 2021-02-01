@@ -44,8 +44,8 @@ export default class HomePage extends React.Component {
                     </MyCarousel>
                 </Section>
                 <Section
-                    style={{ backgroundColor: "#3c4858" }}
-                    title="Cards List">
+                    title="Cards List"
+                    style={{ backgroundColor: "gray" }}>
                     {Array.from(Array(5).keys()).map(x => cards).map((card, key) => (
                         <Card
                             key={key}

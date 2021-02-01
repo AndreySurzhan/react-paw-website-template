@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Burger.css';
 
-const Burger = ({ onClick, ...props }) => {
-
-    const [isClicked, setIsClicked] = useState(false);
+export default function Burger(props) {
     function handleClick(event) {
         event.preventDefault();
-        onClick();
-        setIsClicked(!isClicked)
+        props.onClick();
     }
 
     return (
@@ -15,12 +12,10 @@ const Burger = ({ onClick, ...props }) => {
             id="burger"
             aria-label="Toggle menu"
             onClick={handleClick}
-            className={isClicked ? "burger-is-clicked" : ""}>
+            className={props.isClicked ? "burger-is-clicked" : ""}>
             <div></div>
             <div></div>
             <div></div>
         </div>
     )
 }
-
-export default Burger;
