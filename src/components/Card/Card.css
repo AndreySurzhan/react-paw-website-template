@@ -4,14 +4,22 @@
     align-items: center;
     margin: 1rem;
     border-radius: 0.5rem;
-    background-color:azure;
+    padding: 1rem;
 }
 
 .card > img {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    border-radius: 1rem;
+    width: 70%;
 }
 
 .card > p {
     margin: 1rem;
+}
+
+@media only screen and (max-width: 769px){
+    .card {
+        padding: 0.5rem;
+    }
 }

@@ -1,4 +1,7 @@
 footer {
-    background-color: gray;
-    height: 5vh;
+    display: flex;
+    text-align: center;
+    padding: 1rem;
+    justify-content: center;
+    color: #757575;
 }

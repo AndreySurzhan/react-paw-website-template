@@ -31,7 +31,6 @@ const galleryCards =
 export default class HomePage extends React.Component {
     constructor(props, context) {
         super(props);
-
     }
 
     render() {
@@ -43,9 +42,7 @@ export default class HomePage extends React.Component {
                         {Array.from(Array(4).keys()).map((x, i) => (<img key={i} src={require('../../assets/images/1.jpg')}></img>))}
                     </MyCarousel>
                 </Section>
-                <Section
-                    title="Cards List"
-                    style={{ backgroundColor: "gray" }}>
+                <Section title="Cards List">
                     {Array.from(Array(5).keys()).map(x => cards).map((card, key) => (
                         <Card
                             key={key}
