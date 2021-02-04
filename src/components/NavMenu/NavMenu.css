@@ -2,7 +2,6 @@
 #nav-menu {      
     margin: 0;
     padding: 0;
-    padding-top: 0.3rem;
     list-style: none;
     display: flex;
     flex-direction: row;

@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousel, { Dots, autoplayPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
+import './MyCarousel.css';
 
 export default class MyCarousel extends React.Component {
   constructor(props) {
@@ -19,23 +20,19 @@ export default class MyCarousel extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="carousel">
         <Carousel
           value={this.state.value}
           slides={this.state.slides}
           onChange={this.onchange}
-          plugins={[
-            'infinite',
-            {
-              resolve: autoplayPlugin,
-              options: {
-                interval: 2000,
-              }
-            },
-          ]}
+          infinite={true}
+          autoPlay={2000}
           animationSpeed={1000}
         />
-        <Dots value={this.state.value} onChange={this.onchange} number={this.state.slides.length} />
+        <Dots 
+          value={this.state.value} 
+          onChange={this.onchange} 
+          number={this.state.slides.length} />
       </div>
     );
   }

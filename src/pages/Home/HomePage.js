@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../../components/Card/Card';
 import MyCarousel from '../../components/Carousel/MyCarousel';
 import Gallery from '../../components/Gallery/Gallery';
+import { MyCalendar } from '../../components/MyCalendar/MyCalendar';
 import Section from '../../components/Section/Section'
 
 const cards =
@@ -37,6 +38,21 @@ export default class HomePage extends React.Component {
         // eslint-disable-next-line no-unused-expressions
         return (
             <div>
+                <Section title="Calendar">
+                    <MyCalendar></MyCalendar>
+                </Section>
+                <Section title="Listings">
+                    <Gallery>
+                    {Array.from(Array(4).keys()).map((x, i) => (<div class="airbnb-embed-frame" data-id="33831042" data-view="home" style={{width:"450px", height:"300px", margin:0}}>
+                        <a href={"https://www.airbnb.com/rooms/33831042?s=66&amp;unique_share_id=3695363b-aa2c-49b6-a5cf-f9bfe066ab05&amp;source=embed_widget"}>
+                            View On Airbnb
+                        </a>
+                        <a href={"https://www.airbnb.com/rooms/33831042?s=66&amp;unique_share_id=3695363b-aa2c-49b6-a5cf-f9bfe066ab05&amp;source=embed_widget"} rel="nofollow">
+                            The Pelican&#x27;s Nest -Perfect Private Spot w/Views
+                        </a>
+                    </div>))}
+                    </Gallery>
+                </Section>
                 <Section title="Carousel">
                     <MyCarousel>
                         {Array.from(Array(4).keys()).map((x, i) => (<img key={i} src={require('../../assets/images/1.jpg')}></img>))}
