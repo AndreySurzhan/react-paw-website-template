@@ -9,7 +9,8 @@ const cards =
 {
     image: {
         alt: "some test",
-        src: require("../../assets/images/1.jpg")
+        src: require("../../assets/images/1.jpg"),
+        style: {width: "30%"}
     },
     title: "Title 1",
     subtitle: "Subtitle 1",
@@ -29,6 +30,7 @@ const galleryCards =
     subtitle: "Subtitle 1",
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 };
+
 export default class HomePage extends React.Component {
     constructor(props, context) {
         super(props);
@@ -40,18 +42,6 @@ export default class HomePage extends React.Component {
             <div>
                 <Section title="Calendar">
                     <MyCalendar></MyCalendar>
-                </Section>
-                <Section title="Listings">
-                    <Gallery>
-                    {Array.from(Array(4).keys()).map((x, i) => (<div class="airbnb-embed-frame" data-id="33831042" data-view="home" style={{width:"450px", height:"300px", margin:0}}>
-                        <a href={"https://www.airbnb.com/rooms/33831042?s=66&amp;unique_share_id=3695363b-aa2c-49b6-a5cf-f9bfe066ab05&amp;source=embed_widget"}>
-                            View On Airbnb
-                        </a>
-                        <a href={"https://www.airbnb.com/rooms/33831042?s=66&amp;unique_share_id=3695363b-aa2c-49b6-a5cf-f9bfe066ab05&amp;source=embed_widget"} rel="nofollow">
-                            The Pelican&#x27;s Nest -Perfect Private Spot w/Views
-                        </a>
-                    </div>))}
-                    </Gallery>
                 </Section>
                 <Section title="Carousel">
                     <MyCarousel>
