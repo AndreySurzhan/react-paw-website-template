@@ -19,6 +19,7 @@ export default function Card(props) {
       <h3>{props.title}</h3>
       <h4>{props.subtitle}</h4>
       <p>{props.text}</p>
+      {props.children}
     </div>
   );
 }

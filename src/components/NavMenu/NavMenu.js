@@ -9,6 +9,7 @@ export default function NavMenue(props) {
             <li>
                 <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://www.linkedin.com/in/andreisurzhan">
                     <img className="social-icon"
                         src={require("../../assets/icons/linkedin.svg")}

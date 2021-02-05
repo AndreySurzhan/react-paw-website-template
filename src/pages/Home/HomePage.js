@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
 import MyCarousel from '../../components/Carousel/MyCarousel';
 import Gallery from '../../components/Gallery/Gallery';
@@ -57,6 +58,7 @@ export default class HomePage extends React.Component {
                             subtitle={card.subtitle}
                             image={card.image}
                             text={card.text}>
+                                <Button>Click me</Button>
                         </Card>))}
                 </Section>
                 <Section title="Cards Gallery">
