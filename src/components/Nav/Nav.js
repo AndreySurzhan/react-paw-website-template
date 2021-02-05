@@ -24,7 +24,6 @@ export default function Nav(props) {
   function handleBackdropClick() {
     setIsNavMenuOpened(!isNavMenuOpened);
     setIsBurgerClicked(!isBurgerClicked);
-    console.log('ON DROP', isBurgerClicked)
   }
 
   function handleBurgerClick() {
