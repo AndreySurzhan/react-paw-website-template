@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../../components/Card/Card';
 import MyCarousel from '../../components/Carousel/MyCarousel';
 import Gallery from '../../components/Gallery/Gallery';
+import GalleryItem from '../../components/GalleryItem/GalleryItem';
 import { MyCalendar } from '../../components/MyCalendar/MyCalendar';
 import Section from '../../components/Section/Section'
 
@@ -45,7 +46,7 @@ export default class HomePage extends React.Component {
                 </Section>
                 <Section title="Carousel">
                     <MyCarousel>
-                        {Array.from(Array(4).keys()).map((x, i) => (<img key={i} width="300" src={require('../../assets/images/1.jpg')}></img>))}
+                        {Array.from(Array(4).keys()).map((x, i) => (<img key={i} width="300" alt={"test"} src={require('../../assets/images/1.jpg')}></img>))}
                     </MyCarousel>
                 </Section>
                 <Section title="Cards List">
@@ -73,7 +74,11 @@ export default class HomePage extends React.Component {
                 </Section>
                 <Section title="Image Gallery">
                     <Gallery isFlexGrow={true}>
-                        {Array.from(Array(4).keys()).map((x, i) => (<img key={i} width="300" src={require('../../assets/images/1.jpg')}></img>))}
+                        {Array.from(Array(4).keys()).map((x, i) => (
+                        <GalleryItem style={{width: "30%"}} key={i}>
+                            <img alt={"test"} width="100%" src={require('../../assets/images/1.jpg')}></img>
+                        </GalleryItem>
+                        ))}
                     </Gallery>
                 </Section>
             </div>

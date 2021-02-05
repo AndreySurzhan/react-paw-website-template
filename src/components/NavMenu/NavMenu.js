@@ -15,7 +15,7 @@ export default function NavMenue(props) {
                 </li>
                 {
                     props.isVertical 
-                        ?<div>
+                        ? <div>
                             <li>
                                 <NavLink to="/home">
                                     <img className="social-icon"
