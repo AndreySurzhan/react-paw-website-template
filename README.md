@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with:
+ - [Create React App](https://github.com/facebook/create-react-app)
+ - [react-carousel](https://github.com/brainhubeu/react-carousel)
+ - [react-date-range](https://github.com/hypeserver/react-date-range#readme)
 
 ## Available Scripts
 
