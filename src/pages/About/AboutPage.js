@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../../components/Card/Card';
+import Section from '../../components/Section/Section';
 
 const card =
 {
@@ -8,8 +9,7 @@ const card =
         src: require("../../assets/images/1.jpg"),
         style: {
             borderRadius: '50%',
-            width: '200px',
-            height: '200px'
+            width: '20%'
         }
     },
     title: "Title 1",
@@ -27,12 +27,14 @@ export default class AboutPage extends React.Component {
         // eslint-disable-next-line no-unused-expressions
         return (
             <div>
-                <Card
-                    title={card.title}
-                    subtitle={card.subtitle}
-                    image={card.image}
-                    text={card.text}>
-                </Card>
+                <Section title="About Me">
+                    <Card
+                        title={card.title}
+                        subtitle={card.subtitle}
+                        image={card.image}
+                        text={card.text}>
+                    </Card>
+                </Section>
             </div>
         )
     }

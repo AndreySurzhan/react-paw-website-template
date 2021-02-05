@@ -6,9 +6,16 @@
     justify-content: center;
 }
 
+.gallery > * {
+    margin: 1rem;
+}
+
+.gallery-is-flex-grow > * {
+    flex-grow: 1;
+}
 
 @media only screen and (max-width: 769px){
     .gallery > * {
-        flex-grow: 1;
+        margin: 0.5rem;
     }
 }
