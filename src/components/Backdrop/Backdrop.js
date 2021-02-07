@@ -8,11 +8,18 @@ export default function Backdrop(props) {
         event.preventDefault();
         props.onClick();
     }
+
+    function getPropsClassNames(props) {
+        return props
+            .className
+            .split()
+            .map(x => x.trim())
+            .join(" ");
+    }
     
     return (
-        <div 
+        <div className={"backdrop " + getPropsClassNames(props)}
             style={backdropStyles} 
-            id="backdrop"
             onClick={handleClick}>
         </div>
     );

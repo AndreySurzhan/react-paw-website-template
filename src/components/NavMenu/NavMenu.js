@@ -20,9 +20,24 @@ export default function NavMenue(props) {
         );
     }
 
+    function getManuClass(isVertical) {
+        return ((isVertical ? "nav-menu-vertical" : "nav-menu-horizontal"))
+    }
+
+    function getShowClass(isVertical, isShown) {
+        if(isVertical && isShown ){
+            return "vertical-show";
+        } else if(!isVertical && isShown ) {
+            return "horizontal-show";
+        } else if(!isShown && !isVertical) {
+            return "horizontal-show";
+        } else {
+            return "";
+        };
+    }
+
     return (
-        props.isShown
-            ? <ul id="nav-menu" className={props.isVertical ? "nav-menu-vertical" : ""}>
+            <ul id="nav-menu" className={getManuClass(props.isVertical) + " " + getShowClass(props.isVertical, props.isShown)}>
                 <li>
                     <NavLink className="link" to="/home">Home</NavLink>
                 </li>
@@ -31,6 +46,5 @@ export default function NavMenue(props) {
                 </li>
                 {props.isVertical ? socialIcons() : null}
             </ul>
-            : null
     );
 }

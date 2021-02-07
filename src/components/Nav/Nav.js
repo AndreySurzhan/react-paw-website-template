@@ -42,9 +42,9 @@ export default function Nav(props) {
           <NavLink to="/home">Logo</NavLink>
         </h1>
         <Burger onClick={handleBurgerClick} isClicked={isBurgerClicked}></Burger>
-        <NavMenue isShown={!isTabletOrMobile || isNavMenuOpened} isVertical={isTabletOrMobile}></NavMenue>
+        <NavMenue isShown={isNavMenuOpened} isVertical={isTabletOrMobile}></NavMenue>
       </nav>
-      { isTabletOrMobile && isNavMenuOpened ? <Backdrop zIndex={2} onClick={handleBackdropClick}></Backdrop> : null } 
+        <Backdrop zIndex={2} className={isNavMenuOpened && isTabletOrMobile ? "backdrop-fade-in" : "backdrop-fade-out"} onClick={handleBackdropClick}></Backdrop>
     </div>
   );
 }
